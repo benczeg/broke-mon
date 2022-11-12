@@ -15,7 +15,7 @@ public class PokemonController {
   // lehessen törölni pokemont (gomb + @DeleteMapping) írja ki, hogy xy pokemon elküldve a profnak
   // ha időd engedi Bag model, Trainer model (regisztrációs oldal) + endpointok
 
-  @GetMapping("pokemon/list")
+  @GetMapping("pokemon")
   public String listPokemon() {
     return "list";
   }
