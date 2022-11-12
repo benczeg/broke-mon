@@ -1,4 +1,4 @@
-package com.brokemon.pokemon;
+package com.brokemon.models;
 
 public class Pokemon {
   //fields -> sql columns
@@ -30,5 +30,18 @@ public class Pokemon {
   public void eat(int foodAmount) { hunger--; weight++; }
   public void takesDmg (int incDmgAmount) { health--; } //beérkező sebzéstől csökken az élete
 
-
+  @Override
+  public String toString() {
+    return "Pokemon{" +
+        "name='" + name + '\'' +
+        ", age=" + age +
+        ", iq=" + iq +
+        ", hunger=" + hunger +
+        ", height=" + height +
+        ", weight=" + weight +
+        ", health=" + health +
+        ", attack=" + attack +
+        ", defense=" + defense +
+        '}';
+  }
 }
