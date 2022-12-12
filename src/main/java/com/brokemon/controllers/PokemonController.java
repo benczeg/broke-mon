@@ -43,6 +43,7 @@ public class PokemonController {
     return "list";
   }
 }
+
   //@DeleteMapping("pokemon/list")
   //?
   //@ResponseBody fog kelleni talán?
@@ -57,4 +58,4 @@ public class PokemonController {
   //   System.out.println(pokemon);
   //   return "form";
   // }
-}
+
