@@ -1,10 +1,10 @@
 package com.brokemon.models;
 
-public class Items {
+public class Item {
     public int slots; //0 primitiv nem tud null lenni
 
 
-    public Items(int slots) {
+    public Item(int slots) {
         this.slots = slots;
     }
 
