@@ -2,6 +2,7 @@ package com.brokemon.services;
 
 import com.brokemon.models.Pokemon;
 import com.brokemon.repositories.PokemonRepository;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,4 +21,11 @@ public class PokemonService {
     return pokemonRepository.save(new Pokemon(name, age, iq, 0));
   }
 
+  public List<Pokemon> getAllPokemon() {
+    return (List<Pokemon>) pokemonRepository.findAll();
+  }
+
+  public Pokemon getPokemonById(Long id) {
+    return pokemonRepository.findById(id).orElse(new Pokemon("Pikachu", 1, 123, 0));
+  }
 }

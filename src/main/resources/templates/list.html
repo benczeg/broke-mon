@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,17 +7,20 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>BROKEMON</h1>
-    <h2>My Pokemons</h2>
-    <dl>
-        <dt>Pikachu</dt>
-        <dd>- Pokemon name</dd>
-        <dt>8</dt>
-        <dd>- Pokemon age</dd>
-        <dt>92</dt>
-        <dd>- Pokemon IQ</dd> <button>delete</button>
-      </dl>
-    </form>
+<h1>BROKEMON</h1>
+<h2>My Pokemons</h2>
+<table>
+    <tr>
+        <th>Pokemon's age</th>
+        <th>Pokemon's name</th>
+        <th>Pokemon's iq</th>
+    </tr>
+    <tr th:each="pokemon: ${pokemons}">
+        <td th:text="${pokemon.age}"></td>
+        <td th:text="${pokemon.name}"></td>
+        <td th:text="${pokemon.iq}"></td>
+    </tr>
+</table>
 </body>
 
 </html>
