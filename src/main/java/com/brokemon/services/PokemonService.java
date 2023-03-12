@@ -28,4 +28,8 @@ public class PokemonService {
   public Pokemon getPokemonById(Long id) {
     return pokemonRepository.findById(id).orElse(new Pokemon("Pikachu", 1, 123, 0));
   }
+
+  public void deleteById(Long id) {
+    pokemonRepository.deleteById(id);
+  }
 }

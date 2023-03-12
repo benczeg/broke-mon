@@ -11,14 +11,19 @@
 <h2>My Pokemons</h2>
 <table>
     <tr>
-        <th>Pokemon's age</th>
         <th>Pokemon's name</th>
+        <th>Pokemon's age</th>
         <th>Pokemon's iq</th>
     </tr>
-    <tr th:each="pokemon: ${pokemons}">
-        <td th:text="${pokemon.age}"></td>
+    <tr th:each="pokemon : ${pokemons}">
         <td th:text="${pokemon.name}"></td>
+        <td th:text="${pokemon.age}"></td>
         <td th:text="${pokemon.iq}"></td>
+        <td>
+            <form th:action="@{'/pokemon/delete/'+${pokemon.id}}">
+                <input type="submit" value="Delete me">
+            </form>
+        </td>
     </tr>
 </table>
 </body>
