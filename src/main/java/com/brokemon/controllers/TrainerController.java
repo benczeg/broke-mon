@@ -10,4 +10,8 @@ public class TrainerController {
     public String listProfile() {
         return "profile";
     }
+    @GetMapping("register")
+    public String register() { return "register";}
 }
+
+
