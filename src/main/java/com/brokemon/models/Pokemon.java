@@ -145,18 +145,4 @@ public class Pokemon {
     health--;
   } //beérkező sebzéstől csökken az élete
 
-  @Override
-  public String toString() {
-    return "Pokemon{" +
-        "name='" + name + '\'' +
-        ", age=" + age +
-        ", iq=" + iq +
-        ", hunger=" + hunger +
-        ", height=" + height +
-        ", weight=" + weight +
-        ", health=" + health +
-        ", attack=" + attack +
-        ", defense=" + defense +
-        '}';
-  }
 }
